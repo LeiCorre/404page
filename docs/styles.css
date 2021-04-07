@@ -42,39 +42,83 @@ p {
     font-size: 24px;
 }
 
-div > h7 {
-    text-align: center;
-    width: 100%;
-}
 
-h7 {
+
+.user {
+    padding-top: 2em;
     width: 100%;
     text-align: center;
     font-size: 10px;
     color: grey;
-    
+    margin: auto;
+    display: block;
 }
 
 .grid-cont {
     display: grid;
     grid-template-columns: auto auto;
+    align-content: center;
+    justify-content: center;
     padding: 0.75% 5%;
+
 }
 
 .col1 {
     grid-column: 1 / 2;
+    padding: 1%;
 }
 
 .col2 {
     grid-column: 2 / span 1;
+    padding: 1%;
+    min-width: 425px;
 }
 
 img {
     width: 100%;
-    
+    max-width: 750px;
+    min-width: 425px;
+    margin: 65px auto 0px auto;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1050px) {
+    .grid-cont {
+        grid-template-columns: auto;
+    }
+
+    .col1, .col2 {
+        grid-column: 1 / span 1;
+    }
+
+    h2 {
+        font-size: 44px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .grid-cont {
+        grid-template-columns: auto;
+    }
+
+    .col1, .col2 {
+        grid-column: 1 / span 1;
+    }
+
+    h2 {
+        font-size: 44px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+
+@media only screen and (max-width: 650px) {
     .grid-cont {
         grid-template-columns: auto;
     }
